@@ -1,0 +1,19 @@
+{
+  "name": "project-4",
+  "version": "1.0.0",
+  "description": "### Overview",
+  "main": "test.js",
+  "dependencies": {
+    "tone": "^0.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.generalassemb.ly:mcohen113ga/project-4.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
