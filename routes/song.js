@@ -1,11 +1,20 @@
 const express = require('express');
-const router = require('express').Router();
+const path = require('path');
+// const router = require('express').Router();
 
 const songRouter = express.Router();
 
 songRouter.get('/', (req, res) => {
-  res.render('song');
+res.sendFile(path.resolve(__dirname, '../views', 'index.html'))
+  // res.render('song');
 });
 
+// const renderSongPage = (req,res) => {
+//   res.render('song', {
+//     songs: res.songs || [],
+//     saved: res.saved || []
+//   });
+// };
+// router.get('/');
 
-module.exports = router;
+module.exports = songRouter;
