@@ -6,7 +6,7 @@ DROP TABLE IF EXISTS user_input;
 CREATE TABLE songs (
   id SERIAL
   name VARCHAR
-  text VARCHAR NOT NULL
+  song_text VARCHAR NOT NULL
 )
 
 COMMIT;
