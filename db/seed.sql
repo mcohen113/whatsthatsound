@@ -1,10 +1,9 @@
 BEGIN;
 
-INSERT INTO songs (name, song_text) VALUES
+INSERT INTO songs (title, content) VALUES
 
-
-(song1: "cdefgabcbagfedc"),
-(song2: "JAWS"),
-(song3: "EF");
+('song1', 'cdefgabcbagfedc'),
+('JAWS', 'ef....ef....ef....ef..ef....ef..ef..ef.efefefefefefefefefppp'),
+('song3', 'EF');
 
 COMMIT;

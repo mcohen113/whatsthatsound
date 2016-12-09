@@ -17,3 +17,14 @@ body {
   justify-content: center;
 
 }
+
+.song-container {
+  position: absolute;
+  background-color: lightblue;
+  height: 50vh;
+  width: 50vw;
+  padding: 2%;
+  border: 5%;
+  border-radius: 10px;
+  bottom: 15%;
+}

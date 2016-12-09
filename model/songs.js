@@ -9,7 +9,17 @@ function getAllSongs(req, res, next) {
     .catch(error => next(error));
 }
 
-module.exports = { getAllSongs };
+function addSong(req, res, next) {
+  db.one(`INSERT INTO songs (title, content)
+          VALUES ($/title/, $/content/)
+          RETURNING *;
+          `, req.body)
+    .then(song => {
+      res.song = song;
+      next();
+    })
+    .catch(error => next(error));
+}
 
-
+module.exports = { getAllSongs, addSong };
 

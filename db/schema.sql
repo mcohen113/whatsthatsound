@@ -1,12 +1,12 @@
 BEGIN;
 
-DROP TABLE IF EXISTS user_input;
+DROP TABLE IF EXISTS songs;
 
 
 CREATE TABLE songs (
-  id SERIAL
-  name VARCHAR
-  song_text VARCHAR NOT NULL
-)
+  id SERIAL,
+  title VARCHAR,
+  content TEXT NOT NULL
+);
 
 COMMIT;
