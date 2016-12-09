@@ -1,0 +1,19 @@
+body {
+
+  background: lightgreen;
+
+}
+
+#play {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+#stop {
+ position: right;
+ margin-left: 50%;
+  display: flex;
+  justify-content: center;
+
+}

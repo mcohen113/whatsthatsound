@@ -2,8 +2,9 @@
   "name": "project-4",
   "version": "1.0.0",
   "description": "### Overview",
-  "main": "test.js",
+  "main": "server.js",
   "dependencies": {
+    "express": "^4.14.0",
     "tone": "^0.8.0"
   },
   "devDependencies": {},
