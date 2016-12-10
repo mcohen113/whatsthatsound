@@ -118,9 +118,14 @@ function play(song) {
 
   }, songNotes, subDivision)
 
+  // Tone.Transport.bpm.value = 168
   seq.start("1m")
   Tone.Transport.start();
 }
 
+document.getElementById('tempoSlider').addEventListener('change', function() {
+  // debugger
+ Tone.Transport.bpm.value = this.value
+})
 // when add function is used, title songs
 // define a mapping of which input character becomes which sound/note ie notes = {'A: 'C4', B: D4}
