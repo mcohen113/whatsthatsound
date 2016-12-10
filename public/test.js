@@ -124,8 +124,16 @@ function play(song) {
 }
 
 document.getElementById('tempoSlider').addEventListener('change', function() {
-  // debugger
- Tone.Transport.bpm.value = this.value
-})
-// when add function is used, title songs
-// define a mapping of which input character becomes which sound/note ie notes = {'A: 'C4', B: D4}
+  setTempo(this.value);
+});
+
+function setTempo(bpm) {
+  // update the slider value
+  document.getElementById('tempoSlider').value = bpm;
+  // update the transport
+  Tone.Transport.bpm.value = bpm;
+  // update the label element
+  document.getElementById('sliderLabel').innerText = bpm;
+}
+
+setTempo(160);
