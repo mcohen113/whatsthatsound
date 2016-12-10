@@ -7,12 +7,21 @@ function getTitle() {
 }
     //https://github.com/github/fetch#json
 
+
 function addSongToList(song) {
-  // get the song container to put the songs into
-  var theSongContainer = document.getElementById('savedSongs');
+  // button to play saved song
+  var playAgainButton = document.createElement('button');
+  playAgainButton.addEventListener('click', function() {
+    play(song.content)
+  })
+  playAgainButton.innerText = 'play'
   // create a new li for the song
   var newSong = document.createElement('li');
   newSong.innerText = song.title;
+  // play button for songs in container
+  newSong.appendChild(playAgainButton);
+  // get the song container to put the songs into
+  var theSongContainer = document.getElementById('savedSongs');
   // add the new song to the Song Container
   theSongContainer.appendChild(newSong);
 }
@@ -38,7 +47,7 @@ var synth = new Tone.Synth().toMaster();
 document.getElementById('songform').addEventListener('submit', function(event) {
   event.preventDefault()
   var song = getContent()
-  play(song)//play input from form, invoke
+  play(song) //play input from form, invoke
 })
 // stop button stops play AND clears last input
 document.getElementById('stop').addEventListener('click', function(event) {
