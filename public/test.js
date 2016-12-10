@@ -5,6 +5,32 @@ function getContent() {
 function getTitle() {
   return document.getElementById('songTitle').value
 }
+    //https://github.com/github/fetch#json
+
+function addSongToList(song) {
+  // get the song container to put the songs into
+  var theSongContainer = document.getElementById('savedSongs');
+  // create a new li for the song
+  var newSong = document.createElement('li');
+  newSong.innerText = song.title;
+  // add the new song to the Song Container
+  theSongContainer.appendChild(newSong);
+}
+
+function loadSongs() {
+  fetch('/songs/')
+    .then(function(res) {
+      return res.json()
+    })
+    .then(function(json) {
+      json.songs.forEach(addSongToList)
+      console.log('json parsed', json)
+    })
+    .catch(function(ex) {
+      console.log('parsing failed', ex)
+    })
+}
+loadSongs();
 
 //create a synth and connect it to the master output (your speakers)
 var synth = new Tone.Synth().toMaster();
