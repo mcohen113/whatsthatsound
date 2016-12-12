@@ -60,20 +60,20 @@ function loadSongs() {
     })
 }
 loadSongs();
-
-//create a synth and connect it to the master output (your speakers)
-var synth = new Tone.Synth().toMaster();
-// var song = 'cdefgabcbagfedc'
-document.getElementById('songform').addEventListener('submit', function(event) {
+function handlePlaySong(event) {
   event.preventDefault()
   var song = getContent()
   play(song) //play input from form, invoke
-})
+}
+document.getElementById('songform').addEventListener('submit', handlePlaySong);
+
+function handleStopSong(event) {
+   Tone.Transport.cancel().stop()
+}
 // stop button stops play AND clears last input
-document.getElementById('stop').addEventListener('click', function(event) {
-  Tone.Transport.cancel().stop()
-})
-document.getElementById('add').addEventListener('click', function(event) {
+document.getElementById('stop').addEventListener('click', handleStopSong)
+
+function handleAddSong(event) {
   fetch('/songs/', {
     method: 'POST',
     headers: {
@@ -96,8 +96,12 @@ document.getElementById('add').addEventListener('click', function(event) {
     .catch(function (error) {
       alert('song sucks but not because the server deemed it so');
     })
-})
+}
 
+document.getElementById('add').addEventListener('click', handleAddSong)
+
+//create a synth and connect it to the master output (your speakers)
+var synth = new Tone.Synth().toMaster();
 //a-z A4++
 var subDivision = '4n'
 var notes = {A: 'A4', B: 'B4', C: 'C4', D: 'D4', E: 'E4', F: 'F4', G: 'G4', H: 'A5', I: 'B5', J: 'C5', K: 'D5', L: 'E5', M: 'F5', N: 'G5', O: 'A6', P: 'B6', Q:'C6', R: 'D6', S: 'E6', T: 'F6', U: 'G6', V: 'A7', W: 'B7', X: 'C7', Y: 'D7', Z: 'E7', '.': false}
