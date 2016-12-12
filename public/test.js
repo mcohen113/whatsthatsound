@@ -10,36 +10,47 @@ function getTempo() {
   return document.getElementById('tempoSlider').value;
 }
 
-    //https://github.com/github/fetch#json
 
-// function deleteSong(id) {
-//   return fetch()
-//     .then()
-//     .catch()
-// }
-// sliderFunction
+function deleteSong(id) {
+  return fetch('/songs/'+ id, { method: 'DELETE' })
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error('server didnt delete');
+      }
+    })
+    .catch(function (error) {
+      console.log('delete song failed', error);
+      alert('problem!! song still there');
+      throw error;
+    })
+}
+
 function addSongToList(song) {
+
   // button to play saved song
   //
+  // play button for songs in container
   var playAgainButton = document.createElement('button');
   playAgainButton.addEventListener('click', function() {
     play(song.content)
   })
   playAgainButton.innerText = 'play'
 
-  // deleteButton.addEventListener('click', function () {
-  //   deleteSong(song.id)
-  //     .then(function () {
-  //       newSong.remove();
-  //     });
-  // })
+  var deleteButton = document.createElement('button');
+  deleteButton.addEventListener('click', function () {
+    deleteSong(song.id)
+      .then(function () {
+        newSong.remove();
+      })
+  })
+  deleteButton.innerText = 'delete'
 
   // create a new li for the song
   var newSong = document.createElement('li');
   newSong.innerText = song.title;
-
-  // play button for songs in container
   newSong.appendChild(playAgainButton);
+  newSong.appendChild(deleteButton)
+
   // get the song container to put the songs into
   var theSongContainer = document.getElementById('savedSongs');
   // add the new song to the Song Container
