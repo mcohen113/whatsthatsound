@@ -1,30 +1,105 @@
+html {
+
+
+}
+
+header {
+
+/*background-color: lightblue;*/
+  font-size: 300%;
+  margin-left: 30%;
+  margin-bottom: 10%;
+
+}
+
 body {
 
-  background: lightgreen;
+  /*background: lightgreen;*/
+  font-family: 'Acme', sans-serif;
+  background-image: url('vintagetape1.jpg');
+  background-size: 100%;
+}
 
+h1 {
+
+position: relative;
+margin: 0 auto;
+
+}
+
+.form-container {
+  position: relative;
+  display: flex;
+  flex-direction: row
+}
+
+.button-container {
+
+  display: flex;
+  justify-content: flex-start;
+
+}
+.play {
+  /*padding: 30px;
+  border-radius: 10px;*/
 }
 
 #play {
-  position: absolute;
+position: relative;
+  padding: 30px;
+  width: 150px;
+  height: 100px;
+  background: rgba(0, 150, 0, 0.3);
   display: flex;
-  justify-content: center;
+  justify-content: left;
+ /* margin-left: 20%;*/
+}
+
+#songTitle {
+  position: relative;
+  border-radius: 10px;
+  border: 5%;
+}
+
+#songData {
+  border-radius: 10px;
+  height: 10%;
+  width: 40vw;
 }
 
 #stop {
- position: right;
- margin-left: 50%;
-  display: flex;
+  position: right;
+  padding: 30px;
+  width: 150px;
+  height: 100px;
+  background: rgba(150, 0, 0, 0.3);
+/*  display: flex;
   justify-content: center;
+  flex-wrap: wrap;*/
+  margin-left: 20%;
+}
 
+#add {
+    position: right;
+  padding: 30px;
+  width: 150px;
+  height: 100px;
+  background: rgba(0, 150, 150, 0.3);
+  margin-left: 40%;
 }
 
 .song-container {
   position: absolute;
-  background-color: lightblue;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-left: 50%;
+  margin-right: 5%;
   height: 50vh;
   width: 50vw;
   padding: 2%;
   border: 5%;
   border-radius: 10px;
   bottom: 15%;
+  overflow: scroll;
 }
+
+

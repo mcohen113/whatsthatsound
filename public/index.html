@@ -4,21 +4,41 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>SOUND</title>
+  <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="/tone.js"></script>
 </head>
 <body>
   <header>What's Your Sound</header>
-  <form id="songform">
-    <input  type="text" id="songTitle">Title<br>
-    <input  type="text" id="songData">Enter a passage<br>
-    <button type="submit" id="play">PLAY DATA</button>
-    <button type="button" id="stop">STOP</button>
-    <button type="submit" id="add">ADD</button>
-  </form>
+  <h1>Instructions</h1>
+    <div class="instructions">
+      <ol>
+        <li>Enter a passage of text, and a title</li>
+        <li>Hit the play button to listen to your text</li>
+        <li>Edit as you like and hit add to  save it</li>
+      </ol>
+    </div>
+  <div class='form-container'>
+      <form id="songform">
+        <input  type="text" id="songTitle">Title<br>
+        <input  type="text" id="songData">Enter a passage<br>
+        <div class="button-container">
+          <div class="play">
+            <button type="submit" id="play">PLAY</button>
+          </div>
+          <div class="stop">
+            <button type="button" id="stop">STOP</button>
+          </div>
+          <div class="add">
+            <button type="submit" id="add">ADD</button>
+          </div>
+        </div>
+      </form>
+  </div>
+
   <input id="tempoSlider" type="range" min="160" max="400" step="12"/>
   <label id ="sliderLabel" for="tempoSlider"></label>
-  <div class="song-container">Pieces
+  <div class="song-container">JAMS
     <ul id='savedSongs'>
     </ul>
   </div>
