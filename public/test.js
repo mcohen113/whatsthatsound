@@ -98,23 +98,7 @@ document.getElementById('add').addEventListener('click', function(event) {
     })
 })
 
-// { "type": "success", "value": { "id": 268, "joke": "Time waits for no man. Unless that man is Chuck Norris." } }
-
-//play a middle 'C' for the duration of an 8th note
-// synth.triggerAttackRelease("C4", "8n");
-
-// //play a note every quarter-note
-// var loop = new Tone.Loop(function(time){
-//     synth.triggerAttackRelease("C2", "8n", time);
-// }, "4n");
-
-// //loop between the first and fourth measures of the Transport's timeline
-// loop.start("1m").stop("4m");
-
-
-
-//a-z c4++
-//0-9 diatonic triads starting from 0 = c e g, (c major) 1 = D F A (d minor)
+//a-z A4++
 var subDivision = '4n'
 var notes = {A: 'A4', B: 'B4', C: 'C4', D: 'D4', E: 'E4', F: 'F4', G: 'G4', H: 'A5', I: 'B5', J: 'C5', K: 'D5', L: 'E5', M: 'F5', N: 'G5', O: 'A6', P: 'B6', Q:'C6', R: 'D6', S: 'E6', T: 'F6', U: 'G6', V: 'A7', W: 'B7', X: 'C7', Y: 'D7', Z: 'E7', '.': false}
 function play(song) {
@@ -129,7 +113,7 @@ function play(song) {
     }
     return 'A4';
   })
-    // return  notes[c] || 'A4'
+
   var seq = new Tone.Sequence(function(time, note) {
     if (note) {
       synth.triggerAttackRelease(note, subDivision, time)
@@ -139,7 +123,6 @@ function play(song) {
 
   }, songNotes, subDivision)
 
-  // Tone.Transport.bpm.value = 168
   seq.start("1m")
   Tone.Transport.start();
 }
