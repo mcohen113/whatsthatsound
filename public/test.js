@@ -72,27 +72,32 @@ function handleStopSong(event) {
 
 
 function handleAddSong(event) {
+
+  event.preventDefault()
+
+  var postedSong = {
+    title: getTitle(),
+    content: getContent()
+    // bpm: getTempo()
+  };
+
   fetch('/songs/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({
-      title: getTitle(),
-      content: getContent(),
-      // bpm: getTempo()
-    })
+    body: JSON.stringify(postedSong)
   })
     .then(function (response) {
       if (response.ok) {
-        // do stuff to add song
-        alert('song rocks added it');
+       addSongToList(postedSong)
       } else {
-        alert('song suckage');
+        throw new Error('server rejected song');
       }
     })
     .catch(function (error) {
-      alert('song sucks but not because the server deemed it so');
+      console.log('adding song failed', error);
+      alert('problem!! song not added');
     })
 }
 
