@@ -59,19 +59,17 @@ function loadSongs() {
       console.log('parsing failed', ex)
     })
 }
-loadSongs();
+
 function handlePlaySong(event) {
   event.preventDefault()
   var song = getContent()
   play(song) //play input from form, invoke
 }
-document.getElementById('songform').addEventListener('submit', handlePlaySong);
 
 function handleStopSong(event) {
    Tone.Transport.cancel().stop()
 }
-// stop button stops play AND clears last input
-document.getElementById('stop').addEventListener('click', handleStopSong)
+
 
 function handleAddSong(event) {
   fetch('/songs/', {
@@ -97,8 +95,6 @@ function handleAddSong(event) {
       alert('song sucks but not because the server deemed it so');
     })
 }
-
-document.getElementById('add').addEventListener('click', handleAddSong)
 
 //create a synth and connect it to the master output (your speakers)
 var synth = new Tone.Synth().toMaster();
@@ -131,10 +127,6 @@ function play(song) {
   Tone.Transport.start();
 }
 
-document.getElementById('tempoSlider').addEventListener('change', function() {
-  setTempo(this.value);
-});
-
 function setTempo(bpm) {
   // update the slider value
   document.getElementById('tempoSlider').value = bpm;
@@ -144,4 +136,11 @@ function setTempo(bpm) {
   document.getElementById('sliderLabel').innerText = bpm;
 }
 
+loadSongs();
+document.getElementById('songform').addEventListener('submit', handlePlaySong);
+document.getElementById('stop').addEventListener('click', handleStopSong);
+document.getElementById('add').addEventListener('click', handleAddSong);
+document.getElementById('tempoSlider').addEventListener('change', function() {
+  setTempo(this.value);
+});
 setTempo(160);
