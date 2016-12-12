@@ -5,19 +5,39 @@ function getContent() {
 function getTitle() {
   return document.getElementById('songTitle').value
 }
+
+function getTempo() {
+  return document.getElementById('tempoSlider').value;
+}
+
     //https://github.com/github/fetch#json
 
-
+// function deleteSong(id) {
+//   return fetch()
+//     .then()
+//     .catch()
+// }
+// sliderFunction
 function addSongToList(song) {
   // button to play saved song
+  //
   var playAgainButton = document.createElement('button');
   playAgainButton.addEventListener('click', function() {
     play(song.content)
   })
   playAgainButton.innerText = 'play'
+
+  // deleteButton.addEventListener('click', function () {
+  //   deleteSong(song.id)
+  //     .then(function () {
+  //       newSong.remove();
+  //     });
+  // })
+
   // create a new li for the song
   var newSong = document.createElement('li');
   newSong.innerText = song.title;
+
   // play button for songs in container
   newSong.appendChild(playAgainButton);
   // get the song container to put the songs into
@@ -61,7 +81,8 @@ document.getElementById('add').addEventListener('click', function(event) {
     },
     body: JSON.stringify({
       title: getTitle(),
-      content: getContent()
+      content: getContent(),
+      // bpm: getTempo()
     })
   })
     .then(function (response) {
