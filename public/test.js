@@ -12,7 +12,7 @@ function getTempo() {
 
 
 function deleteSong(id) {
-  return fetch('/songs/'+ id, { method: 'DELETE' })
+  return fetch('/songs/' + id, { method: 'DELETE' })
     .then(function (response) {
       if (!response.ok) {
         throw new Error('server didnt delete');

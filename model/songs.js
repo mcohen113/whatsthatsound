@@ -21,5 +21,15 @@ function addSong(req, res, next) {
     .catch(error => next(error));
 }
 
-module.exports = { getAllSongs, addSong };
+function deleteSong(req, res, next) {
+  db.none(
+    'DELETE FROM songs WHERE id = $/id/',
+    { id: req.params.id })
+    .then(() => {
+      next();
+    })
+    .catch(error => next(error));
+}
+
+module.exports = { getAllSongs, addSong, deleteSong };
 
