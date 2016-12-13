@@ -41,10 +41,6 @@ h1 {
   display: flex;
   justify-content: flex-start;
 }
-.play {
-  /*padding: 30px;
-  border-radius: 10px;*/
-}
 
 #play {
 position: relative;
@@ -54,12 +50,12 @@ position: relative;
   background: rgba(0, 150, 0, 0.3);
   display: flex;
   justify-content: left;
- /* margin-left: 20%;*/
 }
 
 #songTitle {
   position: relative;
   left: 35%;
+  margin-bottom: 3px;
   border-radius: 10px;
   border: 5%;
 }
@@ -68,6 +64,7 @@ position: relative;
   border-radius: 10px;
   height: 10%;
   width: 40vw;
+  margin-bottom: 3%;
 }
 
 #stop {
@@ -113,7 +110,6 @@ position: relative;
   height: 50vh;
   width: 35vw;
   padding: 2%;
-  /*border: 10%;*/
   border-radius: 10px;
   bottom: 10%;
   overflow: scroll;
@@ -126,5 +122,13 @@ position: relative;
 
 ul {
   list-style: none;
+}
+
+#tempoSlider
+{
+  position: relative;
+  height: 6vh;
+  width: 20vw;
+  text-align: right;
 }
 
