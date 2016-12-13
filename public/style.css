@@ -20,11 +20,9 @@ body {
 }
 
 h1 {
-
   position: relative;
   left: 20%;
 /*margin: 0 auto;*/
-
 }
 
 .instructions {
@@ -39,10 +37,9 @@ h1 {
 }
 
 .button-container {
-
+  top: 10px;
   display: flex;
   justify-content: flex-start;
-
 }
 .play {
   /*padding: 30px;
@@ -51,7 +48,7 @@ h1 {
 
 #play {
 position: relative;
-  padding: 30px;
+  padding: 40px;
   width: 150px;
   height: 100px;
   background: rgba(0, 150, 0, 0.3);
@@ -75,7 +72,7 @@ position: relative;
 
 #stop {
   position: right;
-  padding: 30px;
+  padding: 40px;
   width: 150px;
   height: 100px;
   background: rgba(150, 0, 0, 0.3);
@@ -87,7 +84,7 @@ position: relative;
 
 #add {
     position: right;
-  padding: 30px;
+  padding: 40px;
   width: 150px;
   height: 100px;
   background: rgba(0, 150, 150, 0.3);
@@ -100,11 +97,11 @@ position: relative;
   margin-left: 50%;
   margin-right: 5%;
   height: 50vh;
-  width: 50vw;
+  width: 35vw;
   padding: 2%;
-  border: 5%;
+  /*border: 10%;*/
   border-radius: 10px;
-  bottom: 15%;
+  bottom: 10%;
   overflow: scroll;
 }
 
@@ -113,4 +110,7 @@ position: relative;
 
 }
 
+ul {
+  list-style: none;
+}
 

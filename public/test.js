@@ -34,8 +34,10 @@ function addSongToList(song) {
   playAgainButton.addEventListener('click', function() {
     play(song.content)
   })
-  playAgainButton.innerText = 'play'
-  playAgainButton.style.cssText = "color: green", "padding: 5px";
+  playAgainButton.innerText = 'play it';
+  playAgainButton.style.color = 'green';
+  playAgainButton.style.display = 'flex';
+  playAgainButton.style.float = 'center'
 
   var deleteButton = document.createElement('button');
   deleteButton.addEventListener('click', function () {
@@ -44,8 +46,10 @@ function addSongToList(song) {
         newSong.remove();
       })
   })
-  deleteButton.innerText = 'delete'
-  deleteButton.style.setAttribute = "color: red", "padding: 5px", "float: right";
+  deleteButton.innerText = 'delete';
+  deleteButton.style.color = 'red';
+  deleteButton.style.display = 'flex';
+  deleteButton.style.float = 'center'
 
   // create a new li for the song
   var newSong = document.createElement('li');
