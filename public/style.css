@@ -82,6 +82,20 @@ position: relative;
   margin-left: 20%;
 }
 
+.cont-button-play {
+  background: rgba(0, 150, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+
+}
+.cont-button-delete {
+  background: rgba(150, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
 #add {
     position: right;
   padding: 40px;

@@ -35,9 +35,8 @@ function addSongToList(song) {
     play(song.content)
   })
   playAgainButton.innerText = 'play it';
-  playAgainButton.style.color = 'green';
-  playAgainButton.style.display = 'flex';
-  // playAgainButton.style.float = 'center'
+  playAgainButton.setAttribute("class", "cont-button-play");
+
 
   var deleteButton = document.createElement('button');
   deleteButton.addEventListener('click', function () {
@@ -47,8 +46,9 @@ function addSongToList(song) {
       })
   })
   deleteButton.innerText = 'delete';
-  deleteButton.style.color = 'red';
-  deleteButton.style.display = 'flex';
+  deleteButton.setAttribute("class", "cont-button-delete");
+  // deleteButton.style.color = 'red';
+  // deleteButton.style.display = 'flex';
   // deleteButton.style.float = 'center'
 
   // create a new li for the song
@@ -122,7 +122,7 @@ function handleAddSong(event) {
 var synth = new Tone.Synth().toMaster();
 //a-z A4++
 var subDivision = '4n'
-var notes = {A: 'A4', B: 'B4', C: 'C4', D: 'D4', E: 'E4', F: 'F4', G: 'G4', H: 'A5', I: 'B5', J: 'C5', K: 'D5', L: 'E5', M: 'F5', N: 'G5', O: 'A6', P: 'B6', Q:'C6', R: 'D6', S: 'E6', T: 'F6', U: 'G6', V: 'A7', W: 'B7', X: 'C7', Y: 'D7', Z: 'E7', '.': false}
+var notes = {A: 'A4', B: 'B4', C: 'C4', D: 'D4', E: 'E4', F: 'F4', G: 'G4', H: 'A5', I: 'B5', J: 'C5', K: 'D5', L: 'E5', M: 'F5', N: 'G5', O: 'A6', P: 'B6', Q:'C6', R: 'D6', S: 'E6', T: 'F6', U: 'G6', V: 'A7', W: 'B7', X: 'C7', Y: 'D7', Z: 'E7', '.': false, '1': 'C#4','2': 'D#4', '3': 'F#4', '4': 'G#4', '5': 'A#4', '6': 'C#5', '7': 'D#5', '8': 'F#5', '9': 'G#5', '0': 'A#5'}
 function play(song) {
   if (typeof song !== 'string') {
     song = JSON.stringify(song);
@@ -133,7 +133,7 @@ function play(song) {
     if (c in notes) {
       return notes[c];
     }
-    return 'A4';
+    return 'C4';
   })
 
   var seq = new Tone.Sequence(function(time, note) {
