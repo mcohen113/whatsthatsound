@@ -4,11 +4,10 @@ html {
 }
 
 header {
-
 /*background-color: lightblue;*/
   font-size: 300%;
   margin-left: 30%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 
 }
 
@@ -22,9 +21,15 @@ body {
 
 h1 {
 
-position: relative;
-margin: 0 auto;
+  position: relative;
+  left: 20%;
+/*margin: 0 auto;*/
 
+}
+
+.instructions {
+  position: relative;
+  left: 15%;
 }
 
 .form-container {
@@ -57,6 +62,7 @@ position: relative;
 
 #songTitle {
   position: relative;
+  left: 35%;
   border-radius: 10px;
   border: 5%;
 }
@@ -100,6 +106,11 @@ position: relative;
   border-radius: 10px;
   bottom: 15%;
   overflow: scroll;
+}
+
+#savedSongs {
+
+
 }
 
 

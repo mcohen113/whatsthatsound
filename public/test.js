@@ -35,6 +35,7 @@ function addSongToList(song) {
     play(song.content)
   })
   playAgainButton.innerText = 'play'
+  playAgainButton.style.cssText = "color: green", "padding: 5px";
 
   var deleteButton = document.createElement('button');
   deleteButton.addEventListener('click', function () {
@@ -44,6 +45,7 @@ function addSongToList(song) {
       })
   })
   deleteButton.innerText = 'delete'
+  deleteButton.style.setAttribute = "color: red", "padding: 5px", "float: right";
 
   // create a new li for the song
   var newSong = document.createElement('li');
