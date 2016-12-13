@@ -37,7 +37,7 @@ function addSongToList(song) {
   playAgainButton.innerText = 'play it';
   playAgainButton.style.color = 'green';
   playAgainButton.style.display = 'flex';
-  playAgainButton.style.float = 'center'
+  // playAgainButton.style.float = 'center'
 
   var deleteButton = document.createElement('button');
   deleteButton.addEventListener('click', function () {
@@ -49,7 +49,7 @@ function addSongToList(song) {
   deleteButton.innerText = 'delete';
   deleteButton.style.color = 'red';
   deleteButton.style.display = 'flex';
-  deleteButton.style.float = 'center'
+  // deleteButton.style.float = 'center'
 
   // create a new li for the song
   var newSong = document.createElement('li');
@@ -165,4 +165,4 @@ document.getElementById('add').addEventListener('click', handleAddSong);
 document.getElementById('tempoSlider').addEventListener('change', function() {
   setTempo(this.value);
 });
-setTempo(160);
+setTempo(300);
