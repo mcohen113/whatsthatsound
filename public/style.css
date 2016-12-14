@@ -5,9 +5,11 @@ html {
 
 header {
 /*background-color: lightblue;*/
-  font-size: 300%;
-  margin-left: 30%;
-  margin-bottom: 5%;
+  font-size: 350%;
+  text-shadow: 2px 2px #C0C0C0;
+  margin-left: 32%;
+  margin-top: 5%;
+  margin-bottom: -2%;
 
 }
 
@@ -19,15 +21,22 @@ body {
   background-size: 100%;
 }
 
+
 h1 {
   position: relative;
-  left: 20%;
+  left: 15%;
 /*margin: 0 auto;*/
+}
+
+ol {
+  position: relative;
+  margin-top: -2%;
 }
 
 .instructions {
   position: relative;
-  left: 15%;
+  margin-top: -1%;
+  left: 13%;
 }
 
 .form-container {
@@ -42,15 +51,13 @@ h1 {
   justify-content: flex-start;
 }
 
-#play {
-position: relative;
-  padding: 40px;
-  width: 150px;
-  height: 100px;
-  background: rgba(0, 150, 0, 0.3);
-  display: flex;
-  justify-content: left;
+#play:hover, #stop:hover, #add:hover {
+    background-color: #DAA520;
+    opacity: 0.5;
 }
+
+
+
 
 #songTitle {
   position: relative;
@@ -67,6 +74,16 @@ position: relative;
   margin-bottom: 3%;
 }
 
+#play {
+position: relative;
+  padding: 40px;
+  width: 150px;
+  height: 100px;
+  background: rgba(0, 150, 0, 0.3);
+  display: flex;
+  justify-content: left;
+}
+
 #stop {
   position: right;
   padding: 40px;
@@ -77,6 +94,15 @@ position: relative;
   justify-content: center;
   flex-wrap: wrap;*/
   margin-left: 20%;
+}
+
+#add {
+  position: right;
+  padding: 40px;
+  width: 150px;
+  height: 100px;
+  background: rgba(0, 150, 150, 0.3);
+  margin-left: 40%;
 }
 
 .cont-button-play {
@@ -93,14 +119,6 @@ position: relative;
   padding: 5px;
 }
 
-#add {
-    position: right;
-  padding: 40px;
-  width: 150px;
-  height: 100px;
-  background: rgba(0, 150, 150, 0.3);
-  margin-left: 40%;
-}
 
 .song-container {
   position: absolute;
@@ -127,7 +145,7 @@ ul {
 #tempoSlider
 {
   position: relative;
-  height: 6vh;
+  height: 10vh;
   width: 20vw;
   text-align: right;
 }

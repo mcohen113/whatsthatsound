@@ -34,7 +34,7 @@ function addSongToList(song) {
   playAgainButton.addEventListener('click', function() {
     play(song.content)
   })
-  playAgainButton.innerText = 'play it';
+  playAgainButton.innerText = 'play it!';
   playAgainButton.setAttribute("class", "cont-button-play");
 
 
@@ -45,7 +45,7 @@ function addSongToList(song) {
         newSong.remove();
       })
   })
-  deleteButton.innerText = 'delete';
+  deleteButton.innerText = 'wipe it';
   deleteButton.setAttribute("class", "cont-button-delete");
   // deleteButton.style.color = 'red';
   // deleteButton.style.display = 'flex';
