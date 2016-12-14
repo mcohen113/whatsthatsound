@@ -46,9 +46,7 @@ function addSongToList(song) {
   })
   deleteButton.innerText = 'wipe it';
   deleteButton.setAttribute("class", "cont-button-delete");
-  // deleteButton.style.color = 'red';
-  // deleteButton.style.display = 'flex';
-  // deleteButton.style.float = 'center'
+
 
   // create a new li for the song
   var newSong = document.createElement('li');
@@ -91,27 +89,25 @@ function handleAddSong(event) {
 
   event.preventDefault()
 
-  var postedSong = {
-    title: getTitle(),
-    content: getContent()
-    // bpm: getTempo()
-    //id: getId()
-  };
-
   fetch('/songs/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(postedSong)
+    body: JSON.stringify({
+      title: getTitle(),
+      content: getContent()
+    })
   })
     .then(function (response) {
       if (response.ok) {
-       addSongToList(postedSong)
-       loadSongs()
+       return response.json()// loadSongs()
       } else {
         throw new Error('server rejected song');
       }
+    })
+    .then(function (json) {
+      addSongToList(json.song)
     })
     .catch(function (error) {
       console.log('adding song failed', error);
