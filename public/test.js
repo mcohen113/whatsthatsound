@@ -10,7 +10,6 @@ function getTempo() {
   return document.getElementById('tempoSlider').value;
 }
 
-
 function deleteSong(id) {
   return fetch('/songs/' + id, { method: 'DELETE' })
     .then(function (response) {
@@ -96,6 +95,7 @@ function handleAddSong(event) {
     title: getTitle(),
     content: getContent()
     // bpm: getTempo()
+    //id: getId()
   };
 
   fetch('/songs/', {
@@ -108,6 +108,7 @@ function handleAddSong(event) {
     .then(function (response) {
       if (response.ok) {
        addSongToList(postedSong)
+       loadSongs()
       } else {
         throw new Error('server rejected song');
       }
