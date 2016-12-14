@@ -130,7 +130,7 @@ function play(song) {
     if (c in notes) {
       return notes[c];
     }
-    return 'C4';
+    return 'A2';
   })
 
   var seq = new Tone.Sequence(function(time, note) {
