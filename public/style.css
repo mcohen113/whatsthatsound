@@ -105,6 +105,11 @@ position: relative;
   margin-left: 40%;
 }
 
+.cont-button-play:hover, .cont-button-delete:hover {
+  background-color: #FFD700;
+  opacity: 0.4;
+}
+
 .cont-button-play {
   background: rgba(0, 150, 0, 0.3);
   display: flex;
