@@ -1,5 +1,7 @@
 TEXT MUSIC
 
+Deployed at: https://tranquil-plains-50147.herokuapp.com/
+
 ![alt tag](./public/synthpic.jpg)
 
 We type everyday.  
