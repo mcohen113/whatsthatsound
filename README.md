@@ -1,6 +1,6 @@
 TEXT MUSIC
 
-Deployed at: https://tranquil-plains-50147.herokuapp.com/
+Deployed at: https://textmusic.herokuapp.com/
 
 ![alt tag](./public/synthpic.jpg)
 
