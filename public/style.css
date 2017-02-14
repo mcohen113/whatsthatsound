@@ -48,6 +48,9 @@ ol {
 #play:hover, #stop:hover, #add:hover {
     background-color: #DAA520;
     opacity: 0.5;
+    font-size: 150%;
+    font-weight: 300%
+    text-shadow: 3px;
 }
 
 
