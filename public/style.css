@@ -95,6 +95,7 @@ ol {
   margin-left: 20%;
   border-radius: 5px;
   font-family: 'Acme', sans-serif;
+  font-size: ;
 }
 
 #add {
@@ -111,6 +112,7 @@ ol {
 .cont-button-play:hover, .cont-button-delete:hover {
   background-color: #FFD700;
   opacity: 0.4;
+  font-size: 150%;
 }
 
 .cont-button-play {
@@ -119,6 +121,7 @@ ol {
   justify-content: center;
   padding: 5px;
   border-radius: 5px;
+  font-size: 100%;
 }
 
 .cont-button-delete {
@@ -127,6 +130,7 @@ ol {
   justify-content: center;
   padding: 5px;
   border-radius: 5px;
+  font-size: 100%;
 }
 
 
