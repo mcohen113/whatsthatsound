@@ -14,6 +14,7 @@ body {
   font-family: 'Acme', sans-serif;
   background-image: url('vintagetape1.jpg');
   background-size: 100%;
+  overflow: scroll;
 }
 
 
