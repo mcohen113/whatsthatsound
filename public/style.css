@@ -128,9 +128,9 @@ position: relative;
 
 
 .song-container {
-  position: absolute;
+  position: relative;
   background-color: rgba(0, 0, 0, 0.2);
-  margin-left: 50%;
+  margin-left: 0%;
   margin-right: 5%;
   height: 50vh;
   width: 25vw;
