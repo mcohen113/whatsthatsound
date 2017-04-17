@@ -42,8 +42,8 @@ function addSongToList(song) {
     deleteSong(song.id)
       .then(function () {
         newSong.remove();
-      })
-  })
+      });
+  });
   deleteButton.innerText = 'wipe it';
   deleteButton.setAttribute("class", "cont-button-delete");
 
@@ -52,7 +52,7 @@ function addSongToList(song) {
   var newSong = document.createElement('li');
   newSong.innerText = song.title;
   newSong.appendChild(playAgainButton);
-  newSong.appendChild(deleteButton)
+  newSong.appendChild(deleteButton);
 
   // get the song container to put the songs into
   var theSongContainer = document.getElementById('savedSongs');
