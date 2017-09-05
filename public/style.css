@@ -12,9 +12,12 @@ header {
 
 body {
   font-family: 'Acme', sans-serif;
-  background-image: url('vintagetape1.jpg');
   background-size: 100%;
   overflow: scroll;
+}
+
+#header-container {
+  background-image: url('vintagetape1.jpg');
 }
 
 
@@ -90,9 +93,6 @@ ol {
   width: 150px;
   height: 100px;
   background: rgba(150, 0, 0, 0.3);
-/*  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;*/
   margin-left: 20%;
   border-radius: 5px;
   font-family: 'Acme', sans-serif;
