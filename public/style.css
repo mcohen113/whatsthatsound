@@ -14,7 +14,6 @@ header {
 body {
   font-family: 'Acme', sans-serif;
   background-size: 100%;
-  overflow: scroll;
 }
 
 #header-container {
@@ -31,12 +30,12 @@ font-size: 1.25em;
 h1 {
   position: relative;
   margin-bottom: 1em;
-
+  text-align: center;
 }
 
 ol {
   position: relative;
-  margin-top: -2%;
+  /*margin-top: -2%;*/
   padding-left: 0;
 }
 
@@ -46,7 +45,7 @@ li {
 
 .instructions {
   position: relative;
-  margin-top: -1%;
+  /*margin-top: -1%;*/
 
 }
 
