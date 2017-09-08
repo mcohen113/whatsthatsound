@@ -22,7 +22,6 @@ body {
 }
 
 p {
-
 font-size: 1.25em;
 }
 
@@ -64,13 +63,8 @@ li {
 #play:hover, #stop:hover, #add:hover {
     background-color: #DAA520;
     opacity: 0.5;
-    font-size: 150%;
-    font-weight: 300%
     text-shadow: 3px;
 }
-
-
-
 
 #songTitle {
   position: relative;
@@ -125,7 +119,6 @@ li {
 .cont-button-play:hover, .cont-button-delete:hover {
   background-color: #FFD700;
   opacity: 0.4;
-  font-size: 150%;
 }
 
 .cont-button-play {
