@@ -14,6 +14,7 @@ header {
 body {
   font-family: 'Acme', sans-serif;
   background-size: 100%;
+  background-color: #e2e2e2;
 }
 
 #header-container {
@@ -45,7 +46,6 @@ li {
 .instructions {
   position: relative;
   /*margin-top: -1%;*/
-
 }
 
 .form-container {
@@ -81,11 +81,29 @@ li {
   margin-bottom: 3%;
 }
 
-#play {
+#tryplay {
+  background: rgba(0, 150, 0, 0.3);
+  display: flex;
+  justify-content: left;
+  border-radius: 5px;
+  font-family: 'Acme', sans-serif;
+}
+
+#trystop {
+  display: inline-block;
+  background: rgba(150, 0, 0, 0.3);
+  margin-left: 20%;
+  border-radius: 5px;
+  font-family: 'Acme', sans-serif;
+  font-size: ;
+}
+.bigbuttons {
   position: relative;
   padding: 40px;
   width: 150px;
   height: 100px;
+}
+#play {
   background: rgba(0, 150, 0, 0.3);
   display: flex;
   justify-content: left;
@@ -94,10 +112,6 @@ li {
 }
 
 #stop {
-  position: right;
-  padding: 40px;
-  width: 150px;
-  height: 100px;
   background: rgba(150, 0, 0, 0.3);
   margin-left: 20%;
   border-radius: 5px;
@@ -106,10 +120,6 @@ li {
 }
 
 #add {
-  position: right;
-  padding: 40px;
-  width: 150px;
-  height: 100px;
   background: rgba(0, 150, 150, 0.3);
   margin-left: 40%;
   border-radius: 5px;
@@ -158,7 +168,6 @@ li {
     }*/
 
 #savedSongs {
-
 
 }
 
