@@ -1,5 +1,5 @@
-function getContent() {
-  return document.getElementById('songData').value
+function getContent(elementid) {
+  return document.getElementById(elementid).value
 }
 
 function getTitle() {
@@ -74,9 +74,9 @@ function loadSongs() {
     })
 }
 
-function handlePlaySong(event) {
+function handlePlaySong(event, elementid) {
   event.preventDefault()
-  var song = getContent()
+  var song = getContent(elementid)
   play(song) //play input from form, invoke
 }
 
@@ -156,8 +156,16 @@ function setTempo(bpm) {
 }
 
 loadSongs();
-document.getElementById('songform').addEventListener('submit', handlePlaySong);
-document.getElementById('stop').addEventListener('click', handleStopSong);
+document.getElementById('previewform').addEventListener('submit', function(event) {
+  handlePlaySong(event, 'previewData');
+});
+document.getElementById('songform').addEventListener('submit', function(event) {
+  handlePlaySong(event, 'songData');
+});
+var stopButtons = document.getElementsByClassName('stopbutton');
+for(var i = 0; i < stopButtons.length; i++) {
+  stopButtons[i].addEventListener('click', handleStopSong);
+}
 document.getElementById('add').addEventListener('click', handleAddSong);
 document.getElementById('tempoSlider').addEventListener('change', function() {
   setTempo(this.value);
