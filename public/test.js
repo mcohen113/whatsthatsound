@@ -96,7 +96,7 @@ function handleAddSong(event) {
     },
     body: JSON.stringify({
       title: getTitle(),
-      content: getContent()
+      content: getContent('songData')
     })
   })
     .then(function (response) {
